@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+History
+{% endblock %}
+
+{% block content %}
+    
+    {% for entry in entries %}
+        {{ entry.date }}
+        {{ entry.content }}
+    {% endfor %}
+        
+
+    <a href="{% url 'home' %}">Back</a>
+{% endblock %}
